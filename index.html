@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Feuille Ciseaux</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+<body>
+    <main>
+        <section id="section__top">
+            <h1>GameProject : Rock Paper Cisors Spock Lizard</h1>
+        </section>
+        <section id="section__mid">
+            <article id="displayButtons">
+                <button class="button button--user hidden" value="rock">Rock</button>
+                <button class="button button--user hidden" value="paper">Paper</button>
+                <button class="button button--user hidden" value="scissors">Scissors</button>
+                <button class="button button--user hidden" value="spock">Spock</button>
+                <button class="button button--user hidden" value="lizard">Lizard</button>
+            </article>
+            <article id="displayResult" class="hidden">
+                <p id="userChoice"></p>
+                <p id="compare"></p>
+                <p id="botChoice"></p>
+            </article>
+            <article id="displayScore">
+                <button id="score__btn" class="hidden">Score</button>
+            </article>
+        </section>
+        <section id="section__bottom">
+            <button id="play" class="button button--play">Play</button>
+            <button id="replay" class="button button--replay hidden">Replay</button>
+        </section>
+    </main>
+    <script src="./script/index.js"></script>
+</body>
+</html>
