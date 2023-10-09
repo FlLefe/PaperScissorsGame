@@ -40,6 +40,34 @@ const game = {
 
   init: () => {
     game.togglePlayBtn();
+    const choose = document.querySelector("button:first-child");
+    choose.addEventListener("mouseenter", game.transitionElements);
+    choose.addEventListener("mouseout", game.cancelTransition);
+  },
+
+  transitionElements: () => {
+    const nb0 = document.querySelector("button:nth-child(1)");
+    nb0.style.zIndex = "-1";
+    const buttons = document.querySelectorAll(".button--user");
+    buttons.forEach((button) => {
+      button.classList.add("transition");
+    });
+    const nb1 = document.querySelector("button:nth-child(2)");
+    nb1.style.cssText = "animation-name: transition-right; animation-duration: 2s; animation-fill-mode: forwards;";
+    const nb2 = document.querySelector("button:nth-child(3)");
+    nb2.style.cssText = "animation-name: transition-left; animation-duration: 2s; animation-fill-mode: forwards;";
+    const nb3 = document.querySelector("button:nth-child(4)");
+    nb3.style.cssText = "animation-name: transition-top; animation-duration: 2s; animation-fill-mode: forwards;";
+    const nb4 = document.querySelector("button:nth-child(5)");
+    nb4.style.cssText = "animation-name: transition-bottom; animation-duration: 2s; animation-fill-mode: forwards;";
+  },
+
+  cancelTransition: () => {
+    const buttons = document.querySelectorAll(".button--user");
+    buttons.forEach((button) => {
+      button.classList.remove("transition");
+    });
+    
   },
 
   togglePlayBtn: () => {
@@ -56,6 +84,7 @@ const game = {
       btn.classList.remove("hidden");
       btn.addEventListener("click", (event) => {
         game.userChoice = event.currentTarget.textContent;
+        game.cancelTransition();
         btnsUser.forEach((btn) => {
           btn.classList.add("hidden");
         });
