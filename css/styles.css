@@ -1,16 +1,17 @@
 #section__top {
     width: 100%;
     height: 10vh;
-    background-color: black;
+    background-color:lightslategrey;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 5px aliceblue solid;
 }
 
 #section__mid {
     width: 100%;
     height: 80vh;
-    background-color: antiquewhite;
+    background-color:lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,14 +21,15 @@
 #section__bottom {
     width: 100%;
     height: 10vh;
-    background-color:black;
+    background-color: lightslategrey;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 5px aliceblue solid;
 }
 
 #section__top h1 {
-    color: aliceblue;
+    color: black;
     font-weight: 700;
     font-size: 2rem;
 }
@@ -63,21 +65,78 @@
     font-weight: 600;
 }
 
-#replay {
+#replay, #play {
     background-color: aliceblue;
 }
 
-.transition-top {
-    animation-fill-mode: backwards;
-    animation-duration: 2s;
+#replay:hover, #play:hover{
+    border: 2px aliceblue solid;
+    background-color: black;
+    color: aliceblue;
 }
 
 button[value="elements"]{
     z-index: 10;
+    color: black;
 }
 
 button[value="elements"]:hover{
     display: none;
+}
+
+button[value="rock"]{
+    background-color: #ffd5d5;
+    border:2px #ff8080 solid;
+}
+
+button[value="rock"]:hover{
+    background-color: #ff8080;
+    border:2px #ff8080 solid;
+    color: #ffd5d5;
+}
+
+button[value="paper"]{
+    background-color: #fff6d5;
+    border:2px #ffdf5d solid;
+}
+
+button[value="paper"]:hover{
+    background-color: #ffdf5d;
+    border:2px #ffdf5d solid;
+    color: #c5b785;
+}
+
+button[value="scissors"]{
+    background-color: #f6d5ff;
+    border:2px #c671dc solid;
+}
+
+button[value="scissors"]:hover{
+    background-color: #c671dc;
+    border:2px #c671dc solid;
+    color: #f6d5ff;
+}
+
+button[value="spock"]{
+    background-color: #d5e5ff;
+    border:2px #80b3ff solid;
+}
+
+button[value="spock"]:hover{
+    background-color: #80b3ff;
+    border:2px #80b3ff solid;
+    color: #d5e5ff;
+}
+
+button[value="lizard"]{
+    background-color: #d7f4d7;
+    border:2px #679967 solid;
+}
+
+button[value="lizard"]:hover{
+    background-color: #679967;
+    border:2px #679967 solid;
+    color: #d7f4d7;
 }
 
 @keyframes transition-right {

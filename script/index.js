@@ -48,10 +48,6 @@ const game = {
   transitionElements: () => {
     const nb0 = document.querySelector("button:nth-child(1)");
     nb0.style.zIndex = "-1";
-    const buttons = document.querySelectorAll(".button--user");
-    buttons.forEach((button) => {
-      button.classList.add("transition");
-    });
     const nb1 = document.querySelector("button:nth-child(2)");
     nb1.style.cssText = "animation-name: transition-right; animation-duration: 2s; animation-fill-mode: forwards;";
     const nb2 = document.querySelector("button:nth-child(3)");
